@@ -12,6 +12,9 @@ import static utils.Constats.BASE_URL;
 @DefaultUrl(BASE_URL)
 public class ebayHomePage extends PageObject {
 
+    public ebayHomePage() {
+    }
+
     @FindBy(xpath = "//input[@id='gh-ac']")
     WebElementFacade searchBox;
 
@@ -20,6 +23,12 @@ public class ebayHomePage extends PageObject {
 
     @FindBy(xpath = "//*[@id='gh-cat']")
     Select categoriesDropdown;
+
+    @FindBy(xpath = "//a[@id='gh-eb-Geo-a-default']/span[1]")
+    WebElementFacade languageBtn;
+
+    @FindBy(xpath = "//a[@id='gh-eb-Geo-a-en']")
+    WebElementFacade alernativeLanguageBtn;
 
     public void enterSearchKeywords(String searchKeyword ){
         searchBox.type(searchKeyword);
@@ -34,5 +43,11 @@ public class ebayHomePage extends PageObject {
 
     public void chooseCategory(String category) throws NoSuchElementException {
         categoriesDropdown.selectByVisibleText(category);
+    }
+
+    public void selectLanguage(){
+        if (!languageBtn.getText().contains("español")){
+            alernativeLanguageBtn.click();
+        }
     }
 }

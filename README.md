@@ -1,20 +1,19 @@
-# Serenity JUnit Starter project
+# Serenity JUnit Report Training project
 
 
-This is the simplest possible build script setup for Serenity BDD using Java. 
+This is project works  with Serenity BDD using Java. 
 
-This is a very minimal sample project using JUnit and Serenity BDD in Java. 
-You can use this project as a quick starting point for your own projects.
+This is a very minimal project using JUnit and Serenity BDD in Java. 
 
 ## Get the code
 
 Git:
 
-    git clone https://github.com/serenity-bdd/serenity-junit-starter.git
-    cd serenity-junit-starter
+    git clone https://github.com/moisesGlb/serenityReportsTraning.git
+    cd serenityReportsTraning
 
 
-Or simply [download a zip](https://github.com/serenity-bdd/serenity-junit-starter/archive/master.zip) file.
+Or simply [download a zip](https://codeload.github.com/moisesGlb/serenityReportsTraning/zip/master) file.
 
 ## Use Maven
 
@@ -22,14 +21,8 @@ Open a command window and run:
 
     mvn clean verify
 
-## Use Gradle
-
-Open a command window and run:
-
-    gradlew test 
-
 
 ## Viewing the reports
 
-Both of the commands provided above will produce a Serenity test report in the `target/site/serenity` directory. Go take a look!
+The command provided above will produce a Serenity test report in the `target/site/serenity` directory. Go take a look!
 
